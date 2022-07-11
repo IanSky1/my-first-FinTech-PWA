@@ -9,3 +9,23 @@ request.onupgradeneeded = function(event) {
     db.CreateObjectStore('new_transaction', { autoIncrement: true });
 };
 
+request.onsuccess = function(event) {
+    db = event.target.result;
+
+    if (navigator.onLine) {
+
+    }
+};
+
+request.onerror = function(event) {
+    console.log(event.target.errorCode);
+};
+
+function saveRecord(record) {
+    const transaction = db.transaction(['new_transaction'], 'readwrite');
+
+    const budgetObjectStore = transaction.objectStore('new_transaction');
+
+    budgetObjectStore.add(record);
+}
+
