@@ -44,8 +44,8 @@
     "name": "FinTech Budget Tracker",
     "short_name": "BudgetTracker",
     "display": "standalone",
-    "theme_color": "",
-    "background_color":"",
+    "theme_color": "#ffffff",
+    "background_color":"#01579b",
     "start_url":"./index.html"
 
 }
